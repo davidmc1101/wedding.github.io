@@ -228,11 +228,166 @@
       </div>
     </section>
 
+    <section id="story" class="story">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span> Bagaimana cinta kami bersemi </span>
+            <h2>Cerita Kami</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
+              doloribus ea molestias voluptatem eveniet maxime.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <ul class="timeline">
+              <li>
+                <div
+                  class="timeline-image"
+                  style="
+                    background-image: url(img/gallery/IMG-20230922-WA0090.jpg);
+                  "
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Pertama bertemu</h3>
+                    <span>1 Juni 2000</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Excepturi voluptatem quia debitis ea nemo possimus?
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div
+                  class="timeline-image"
+                  style="background-image: url(https://picsum.photos/300/300)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Mulai Serius</h3>
+                    <span>23 September 2010</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste, ipsam fugiat quibusdam saepe non aspernatur officia
+                      animi. Magnam, tenetur illo.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="timeline-image"
+                  style="background-image: url(https://picsum.photos/350/350)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Tunangan</h3>
+                    <span>2 Januari 2011</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Incidunt aut aspernatur repellendus aliquid!
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span> Memori Kisah Cinta Kami</span>
+            <h2>Galeri Foto</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              eos distinctio consectetur!
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center"
+        >
+          <div class="col mt-3">
+            <a
+              href="img/gallery/2.png"
+              data-toggle="lightbox"
+              data-caption="Ragil & Nia 1"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/2.png"
+                alt="Ragil & Nia 1"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/1.png"
+              data-toggle="lightbox"
+              data-caption="Ragil & Nia 2"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/1.png"
+                alt="Ragil & Nia 2"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+
+          <div class="col mt-3">
+            <a
+              href="https://picsum.photos/id/250/1200/768"
+              data-toggle="lightbox"
+              data-caption="Ragil & Nia 3"
+              data-gallery="mygallery"
+            >
+              <img
+                src="https://picsum.photos/id/250/300/400"
+                alt="Ragil & Nia 3"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="https://picsum.photos/id/255/1200/768"
+              data-toggle="lightbox"
+              data-caption="Ragil & Nia 4"
+              data-gallery="mygallery"
+            >
+              <img
+                src="https://picsum.photos/id/255/300/400"
+                alt="Ragil & Nia 4"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
 
     <script>
       simplyCountdown(".simply-countdown", {
@@ -247,6 +402,19 @@
           minutes: { singular: "menit", plural: "menit" },
           seconds: { singular: "detik", plural: "detik" },
         },
+      });
+    </script>
+
+    <script>
+      const stickyTop = document.querySelector(".sticky-top");
+      const offcanvas = document.querySelector(".offcanvas");
+
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        stickyTop.style.overflow = "visible";
+      });
+
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        stickyTop.style.overflow = "hidden";
       });
     </script>
   </body>
